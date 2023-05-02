@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import codeRouter from './routes/code';
+import cors from 'cors';
 
 const app: Express = express();
 
@@ -8,6 +9,7 @@ app.get("/", (req: Request, res: Response) => {
 })
 
 //MiddleWare
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

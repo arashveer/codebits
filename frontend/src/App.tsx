@@ -1,22 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import * as React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home/Home";
 
-function App() {
-  const [count, setCount] = useState(0)
+export interface IAppProps {}
 
+export default function App(props: IAppProps) {
   return (
-    <>
-      <h1>Codebits</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Under work!
-      </p>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/snippet/:codeid" element={<Home />} />
+    </Routes>
+  );
 }
-
-export default App
