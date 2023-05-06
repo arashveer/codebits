@@ -35,13 +35,17 @@ codeRouter
     const getCode = await prisma.code.findUnique({
       where: { id: req.params.id },
     });
-    res.send(getCode?.code);
+    res.send(getCode);
   })
-  .put((req: Request<{ id: number }>, res: Response) => {
+  .put(async (req: Request, res: Response) => {
     /*  PUT req for codefile from frontend, use it to update
         REQUIRES:
         RETURN: row from db
         */
+    const updateCode = await prisma.code.update({
+      where: { id: req.params.id },
+      data: { code: req.body.code, updatedAt: new Date().toISOString() },
+    });
     res.send(`Update item ID: ${req.params.id}`);
   })
   .delete((req: Request<{ id: number }>, res: Response) => {
