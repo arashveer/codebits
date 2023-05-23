@@ -3,4 +3,7 @@ export type APIResponse = {
   code: string;
   createdAt: Date;
   updatedAt: Date;
+  title: string;
+  language: string;
+  share: string;
 };

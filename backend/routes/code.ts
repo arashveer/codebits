@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 const codeRouter = express.Router();
 import { PrismaClient } from "@prisma/client";
+import { randomBytes } from "crypto";
 
 const prisma = new PrismaClient();
 
@@ -8,14 +9,17 @@ const prisma = new PrismaClient();
     REQUIRES:
     RETURN: row from db
 */
-codeRouter.post("/create", async (req: any, res: any) => {
-  const { code } = req.body;
+codeRouter.post("/code/create", async (req: any, res: any) => {
+  const { code, title, language } = req.body;
 
   const newCode = await prisma.code.create({
     data: {
       code: code,
       updatedAt: new Date().toISOString(),
       createdAt: new Date().toISOString(),
+      title: title,
+      language: language,
+      share: randomBytes(32).toString("hex"),
     },
   });
   if (newCode) {
@@ -25,18 +29,19 @@ codeRouter.post("/create", async (req: any, res: any) => {
   }
 });
 
-codeRouter
-  .route("/:id")
-  .get(async (req: Request, res: Response) => {
-    /*  GET req for codefile from frontend
+codeRouter.get("/share_id/:share", async (req: Request, res: Response) => {
+  /*  GET req for codefile from frontend
         REQUIRES:
-        RETURN: row from db
+        RETURN: rows share id from db
         */
-    const getCode = await prisma.code.findUnique({
-      where: { id: req.params.id },
-    });
-    res.send(getCode);
-  })
+  const getCode = await prisma.code.findUnique({
+    where: { share: req.params.share },
+  });
+  res.send(getCode);
+});
+
+codeRouter
+  .route("/code/:id")
   .put(async (req: Request, res: Response) => {
     /*  PUT req for codefile from frontend, use it to update
         REQUIRES:
@@ -44,7 +49,11 @@ codeRouter
         */
     const updateCode = await prisma.code.update({
       where: { id: req.params.id },
-      data: { code: req.body.code, updatedAt: new Date().toISOString() },
+      data: {
+        code: req.body.code,
+        updatedAt: new Date().toISOString(),
+        title: req.body.title,
+      },
     });
     res.send(`Update item ID: ${req.params.id}`);
   })

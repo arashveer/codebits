@@ -1,0 +1,36 @@
+.cm-editor.cm-focused {
+  outline: none;
+}
+
+.ͼ1 .cm-scroller {
+  font-family: var(--base-mono-font) !important;
+}
+
+.ͼo .cm-gutters,
+.ͼo {
+  background-color: rgba(43, 45, 46, 255);
+}
+
+.ͼo .cm-activeLine,
+.ͼo .cm-activeLineGutter {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+div.cm-scroller
+  > div.cm-gutters
+  > div.cm-gutter.cm-lineNumbers
+  > div.cm-gutterElement {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  width: 2rem;
+  display: flex;
+  justify-content: right;
+  place-items: center;
+}
+
+div.cm-scroller
+  > div.cm-gutters
+  > div.cm-gutter.cm-lineNumbers
+  > div.cm-gutterElement.cm-activeLineGutter {
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -15,7 +15,7 @@ export function SharedCodeViewer(props: ISharedCodeViewerProps) {
   function retrieveData(data_id: string) {
     axios({
       method: "GET",
-      url: `http://localhost:3000/api/${data_id}`,
+      url: `http://localhost:3000/api/share_id/${data_id}`,
       headers: {
         "Content-Type": "application/json",
       },

@@ -15,4 +15,7 @@ model Code {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   code      String   @default("") @db.Text
+  title     String   @default("untitled") @db.VarChar(64)
+  language  String   @default("js") @db.VarChar(8)
+  share     String   @default("_") @db.VarChar(64) @unique
 }

@@ -1,5 +1,251 @@
-#root {
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rubik:wght@400;500;700&display=swap");
+
+.settings-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNC4yODgiIGhlaWdodD0iMjQuMjg4IiB2aWV3Qm94PSIwIDAgMjQuMjg4IDI0LjI4OCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTEpIj48cGF0aCBkPSJNMTkuODUxLDE2LjY3NkEzLjE3NiwzLjE3NiwwLDEsMSwxNi42NzYsMTMuNSwzLjE3NiwzLjE3NiwwLDAsMSwxOS44NTEsMTYuNjc2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMuNTMyIC0zLjUzMikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMjAuOTc3LDE2LjMxOWExLjc0NywxLjc0NywwLDAsMCwuMzQ5LDEuOTI3bC4wNjQuMDY0YTIuMTE4LDIuMTE4LDAsMSwxLTMsM2wtLjA2NC0uMDY0YTEuNzYxLDEuNzYxLDAsMCwwLTIuOTg1LDEuMjQ5di4xOGEyLjExNywyLjExNywwLDAsMS00LjIzNCwwdi0uMWExLjc0NywxLjc0NywwLDAsMC0xLjE0My0xLjYsMS43NDcsMS43NDcsMCwwLDAtMS45MjcuMzQ5bC0uMDY0LjA2NGEyLjExOCwyLjExOCwwLDEsMS0zLTNsLjA2NC0uMDY0QTEuNzYxLDEuNzYxLDAsMCwwLDMuOCwxNS4zNDZoLS4xOGEyLjExNywyLjExNywwLDEsMSwwLTQuMjM0aC4xYTEuNzQ3LDEuNzQ3LDAsMCwwLDEuNi0xLjE0MywxLjc0NywxLjc0NywwLDAsMC0uMzQ5LTEuOTI3TDQuOSw3Ljk3OGEyLjExOCwyLjExOCwwLDEsMSwzLTNsLjA2NC4wNjRBMS43NDcsMS43NDcsMCwwLDAsOS44ODQsNS40aC4wODVhMS43NDcsMS43NDcsMCwwLDAsMS4wNTktMS42di0uMThhMi4xMTcsMi4xMTcsMCwxLDEsNC4yMzQsMHYuMWExLjc2MSwxLjc2MSwwLDAsMCwyLjk4NSwxLjI0OUwxOC4zMSw0LjlhMi4xMTgsMi4xMTgsMCwxLDEsMywzbC0uMDY0LjA2NGExLjc0NywxLjc0NywwLDAsMC0uMzQ5LDEuOTI3di4wODVhMS43NDcsMS43NDcsMCwwLDAsMS42LDEuMDU5aC4xOGEyLjExNywyLjExNywwLDAsMSwwLDQuMjM0aC0uMWExLjc0NywxLjc0NywwLDAsMC0xLjYsMS4wNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9nPjwvc3ZnPg==);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.rename-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOC42NzEiIGhlaWdodD0iMTcuOTY1IiB2aWV3Qm94PSIwIDAgMTguNjcxIDE3Ljk2NSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC41IDAuNjU3KSI+PHBhdGggZD0iTTE4LDMwaDguODM2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS4xNjQgLTEzLjE5MSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNDksMjQ5LDI0OSwwLjQyKSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTcuNzUzLDQuOTI4QTIuMDgzLDIuMDgzLDAsMCwxLDIwLjcsNy44NzNMOC40MjcsMjAuMTQ1LDQuNSwyMS4xMjcsNS40ODIsMTcuMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTQuMzE4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI0OSwyNDksMjQ5LDAuNDIpIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPjwvZz48L3N2Zz4=);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.tick-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9Ijk2cHgiIGhlaWdodD0iOTZweCI+PHBhdGggZD0iTSAyMy43NzM0MzggMTIgQyAxMi44NTU0MzcgMTIgMTIgMTIuODU0NDM3IDEyIDIzLjc3MzQzOCBMIDEyIDQwLjIyNjU2MiBDIDEyIDUxLjE0NDU2MyAxMi44NTU0MzggNTIgMjMuNzczNDM4IDUyIEwgNDAuMjI2NTYyIDUyIEMgNTEuMTQ0NTYzIDUyIDUyIDUxLjE0NDU2MyA1MiA0MC4yMjY1NjIgTCA1MiAyNC45NzA3MDMgTCA0OCAzMS4xNTIzNDQgTCA0OCA0Mi44MzIwMzEgQyA0OCA0Ny42MjUwMzEgNDcuNjI0MDMxIDQ4IDQyLjgzMjAzMSA0OCBMIDIxLjE2Nzk2OSA0OCBDIDE2LjM3NDk2OSA0OCAxNiA0Ny42MjQwMzEgMTYgNDIuODMyMDMxIEwgMTYgMjEuMTY3OTY5IEMgMTYgMTYuMzc0OTY5IDE2LjM3NDk2OSAxNiAyMS4xNjc5NjkgMTYgTCA0Mi44MzIwMzEgMTYgQyA0NC4xMDEwMzEgMTYgNDUuMDUzMzQ0IDE2LjAyODI1IDQ1Ljc3NzM0NCAxNi4xNTYyNSBMIDQ4LjA2ODM1OSAxMi42MTEzMjggQyA0Ni4zMjYzNTkgMTIuMDk2MzI4IDQzLjgyNTU2MyAxMiA0MC4yMjY1NjIgMTIgTCAyMy43NzM0MzggMTIgeiBNIDUwLjk2Mjg5MSAxNS4zMTQ0NTMgQyA1MC4zMjExMDQgMTUuMzI3MzczIDQ5LjY5NTkzNyAxNS42NDcxODggNDkuMzIwMzEyIDE2LjIyNjU2MiBMIDM0Ljc5ODgyOCAzOC42NzE4NzUgTCAyNS43NzczNDQgMjguMzM1OTM4IEMgMjUuMDUyMzQ0IDI3LjUwNDkzOCAyMy43ODkwNzggMjcuNDE1NTc4IDIyLjk1NTA3OCAyOC4xNDI1NzggQyAyMi4xMjMwNzggMjguODY4NTc4IDIyLjAzNjY3MiAzMC4xMzI4NDQgMjIuNzYzNjcyIDMwLjk2NDg0NCBMIDMzLjUyNzM0NCA0My4zMDA3ODEgQyAzMy45MDgzNDQgNDMuNzM3NzgxIDM0LjQ2MDE1NiA0My45ODYzMjggMzUuMDM1MTU2IDQzLjk4NjMyOCBDIDM1LjA4MzE1NiA0My45ODYzMjggMzUuMTI5NzM0IDQzLjk4NTQyMiAzNS4xNzc3MzQgNDMuOTgyNDIyIEMgMzUuODA0NzM0IDQzLjkzNzQyMiAzNi4zNzM4NDQgNDMuNTk5MjY2IDM2LjcxNDg0NCA0My4wNzIyNjYgTCA1Mi42Nzk2ODggMTguNDAwMzkxIEMgNTMuMjc5Njg4IDE3LjQ3MjM5MSA1My4wMTQ4OTEgMTYuMjM0NzY2IDUyLjA4Nzg5MSAxNS42MzQ3NjYgQyA1MS43Mzk4OTEgMTUuNDA5NzY2IDUxLjM0Nzk2MyAxNS4zMDY3MDEgNTAuOTYyODkxIDE1LjMxNDQ1MyB6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.75rem;
+  height: 1.25rem;
+}
+
+:root {
+  --base-text-color: #d6d7d7;
+  --accent-color: #ee614c;
+  --base-font: "Rubik", sans-serif;
+  --base-mono-font: "JetBrains Mono", monospace;
+}
+
+body {
   max-width: 1280px;
   margin: 0 auto;
+  background-color: #131516;
+  color: var(--base-text-color);
+  font-family: var(--base-font);
+  font-size: 16px;
   padding: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-container {
+  display: flex;
+  border-bottom: 1.5px solid #505151;
+  gap: 0.5rem;
+}
+
+.flex-bottom {
+  display: flex;
+  border-top: 1px solid #454747;
+  background-color: #282a2b;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.flex-link-share {
+  display: flex;
+  justify-content: end;
+  flex-grow: 1;
+}
+
+.flex-link {
+  width: 30rem;
+  color: var(--base-text-color);
+  font-family: var(--base-mono-font);
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.font-mono {
+  font-family: var(--base-mono-font);
+}
+
+#file-name {
+  flex-grow: 1;
+  color: var(--base-text-color);
+  font-family: var(--base-mono-font);
+  font-size: 1rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+#file-name:focus-visible {
+  outline: none;
+}
+
+.rename-button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.top-tabs {
+  background-color: #282a2b;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  display: flex;
+}
+
+.top-tabs:hover {
+  background-color: #242526;
+}
+
+.file-tab {
+  width: 12rem;
+}
+
+.copy-seperator {
+  background-color: #454747;
+  width: 2px;
+  height: 1.25rem;
+  margin: 0rem 0.5rem;
+}
+
+.copy-button {
+  background-color: transparent;
+  border: none;
+  color: var(--base-text-color);
+  font-family: var(--base-font);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.active-copied-accent {
+  color: var(--accent-color);
+}
+
+.save-button {
+  background-color: var(--accent-color);
+  padding: 0.45rem 1rem;
+  color: #fff;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #d9503b;
+}
+
+/* DROP DOWN */
+.menu-container {
+  position: relative;
+}
+
+.menu {
+  background: var(--accent-color);
+  color: var(--base-text-color);
+  font-family: var(--base-mono-font);
+  font-size: 0.85rem;
+  border-radius: 0 0.75rem 0.75rem 0.75rem;
+  position: absolute;
+  width: 15rem;
+  padding: 1rem 0 0 0;
+}
+
+.menu[aria-hidden="true"] {
+  opacity: 0;
+  z-index: 0;
+  visibility: hidden;
+}
+
+.menu[aria-hidden="false"] {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+}
+
+.settings-button {
+  background-color: #282a2b;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  display: flex;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.settings-button > div.settings-icon {
+  transition: transform 0.3s ease-in;
+}
+
+.settings-button[aria-expanded="true"] {
+  background: var(--accent-color);
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  display: flex;
+}
+
+.settings-button[aria-expanded="true"] > div.settings-icon {
+  transform: rotate(105deg);
+}
+
+.btn-group {
+  display: flex;
+  scale: 0.8;
+}
+
+.btn-group button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: var(--base-text-color);
+  padding: 0.5rem;
+  margin: 0.5rem 0 0.75rem 0;
+  cursor: pointer;
+  min-width: 3rem;
+}
+
+.btn-group button:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.btn-group button:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.btn-group button[aria-selected="true"] {
+  background-color: #3b1d1a;
+}
+
+.btn-group button[aria-selected="false"]:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.font-flexbox {
+  display: flex;
+  place-items: center;
+}
+
+.font-flexbox div:first-child {
+  flex-grow: 1;
+  padding-left: 1rem;
 }
