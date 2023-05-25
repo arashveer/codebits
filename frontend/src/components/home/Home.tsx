@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
-import {
-  loadLanguage,
-  langNames,
-  langs,
-} from "@uiw/codemirror-extensions-langs";
-import { javascript } from "@codemirror/lang-javascript";
 import axios from "axios";
 import { APIResponse } from "../../types";
 import { useLocation } from "react-router-dom";
 import DropDownMenu from "../home/DropDownMenu";
 import "../../styles/app.css";
 import "../../styles/editor.css";
-import { LanguageSupport, StreamLanguage } from "@codemirror/language";
 import FileName from "./fileName";
+import { languageSwitch } from "../../utils/languages";
 
 export enum EditorFont {
   SMALL = "0.9rem",
@@ -23,13 +17,12 @@ export enum EditorFont {
 
 function Home() {
   const [codebox, setCodebox] = useState<string>("");
+  const [filename, setFilename] = useState<string>("untitled");
   const [apiResponse, setApiResponse] = useState<APIResponse>();
   const [editorFontSize, setEditorFontSize] = useState<EditorFont>(
     EditorFont.MEDIUM
   );
-  const [editorLanguage, setEditorLanguage] = useState<LanguageSupport>(
-    langs.javascript
-  );
+  const [editorLanguage, setEditorLanguage] = useState<String>("javascript");
   const location = useLocation();
 
   function saveData() {
@@ -38,6 +31,8 @@ function Home() {
       url: "http://localhost:3000/api/code/create",
       data: JSON.stringify({
         code: codebox,
+        language: editorLanguage,
+        title: filename,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -57,6 +52,8 @@ function Home() {
       url: `http://localhost:3000/api/code/${apiResponse?.id}`,
       data: JSON.stringify({
         code: codebox,
+        language: editorLanguage,
+        title: filename,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +71,7 @@ function Home() {
     setEditorFontSize(size);
   }
 
-  function changeLanguage(lang: LanguageSupport) {
+  function changeLanguage(lang: String) {
     setEditorLanguage(lang);
   }
 
@@ -93,7 +90,7 @@ function Home() {
           setEditorLanguage={changeLanguage}
         />
         <div className="file-tab">
-          <FileName code_id={apiResponse?.id || ""} />
+          <FileName code_id={apiResponse?.id || ""} changeName={setFilename} />
         </div>
         <div className="flex-link-share">
           <div className="top-tabs">
@@ -149,10 +146,7 @@ function Home() {
           value={codebox}
           height="600px"
           theme="dark"
-          extensions={
-            [editorLanguage]
-            // [javascript({ jsx: true })]
-          }
+          extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {
             setCodebox(value);
           }}

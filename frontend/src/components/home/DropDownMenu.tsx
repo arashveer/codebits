@@ -2,11 +2,13 @@ import React from "react";
 import "../../styles/app.css";
 import { EditorFont } from "./Home";
 import { LanguageSupport } from "@codemirror/language";
+import { languageSwitch, languages } from "../../utils/languages";
+import { langs } from "@uiw/codemirror-extensions-langs";
 
 interface Props {
   fontSize: EditorFont;
   setFontSize: (size: EditorFont) => void;
-  setEditorLanguage: (lang: LanguageSupport) => void;
+  setEditorLanguage: (lang: String) => void;
 }
 
 export default function DropDownMenu(props: Props) {
@@ -62,7 +64,21 @@ export default function DropDownMenu(props: Props) {
           <div className="settings-icon" />
         </button>
         <div ref={dropDownRef} aria-hidden="true" className="menu">
-          Language
+          <div className="lang-flexbox">
+            <div>Language</div>
+            <div className="flex">
+              <select
+                onChange={(val) => {
+                  props.setEditorLanguage(val.target.value);
+                }}
+                className="lang-dropdown"
+              >
+                {languages.map((item) => (
+                  <option>{item}</option>
+                ))}
+              </select>
+            </div>
+          </div>
           <div className="font-flexbox">
             <div>Font Size</div>
 

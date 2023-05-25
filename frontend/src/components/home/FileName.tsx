@@ -4,6 +4,7 @@ import axios from "axios";
 
 interface Props {
   code_id: String;
+  changeName: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function FileName(props: Props) {
@@ -30,6 +31,10 @@ export default function FileName(props: Props) {
         console.log("Error sending data to api", err);
       });
   }
+
+  useEffect(() => {
+    props.changeName(filename);
+  }, [filename]);
 
   useEffect(() => {
     inputRef.current?.focus();

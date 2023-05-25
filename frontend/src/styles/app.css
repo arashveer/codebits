@@ -161,7 +161,7 @@ body {
 
 .menu {
   background: var(--accent-color);
-  color: var(--base-text-color);
+  color: #fff;
   font-family: var(--base-mono-font);
   font-size: 0.85rem;
   border-radius: 0 0.75rem 0.75rem 0.75rem;
@@ -200,7 +200,21 @@ body {
   background: var(--accent-color);
   padding: 0.625rem 0.75rem;
   border-radius: 0.75rem 0.75rem 0 0;
+  position: relative;
   display: flex;
+}
+
+.settings-button[aria-expanded="true"]::after {
+  content: "";
+  height: 1px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--base-text-color);
 }
 
 .settings-button[aria-expanded="true"] > div.settings-icon {
@@ -248,4 +262,15 @@ body {
 .font-flexbox div:first-child {
   flex-grow: 1;
   padding-left: 1rem;
+}
+
+.lang-flexbox {
+  padding-left: 1rem;
+}
+
+.lang-dropdown {
+  width: 13rem;
+  height: 1.8rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.3rem;
 }
