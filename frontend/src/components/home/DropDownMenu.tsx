@@ -66,7 +66,7 @@ export default function DropDownMenu(props: Props) {
         <div ref={dropDownRef} aria-hidden="true" className="menu">
           <div className="lang-flexbox">
             <div>Language</div>
-            <div className="flex">
+            <div className="flex select-dropdown">
               <select
                 onChange={(val) => {
                   props.setEditorLanguage(val.target.value);

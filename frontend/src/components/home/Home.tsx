@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
-import CodeMirror from "@uiw/react-codemirror";
+import { useEffect, useRef, useState } from "react";
+import CodeMirror, {
+  ReactCodeMirrorRef,
+  getStatistics,
+} from "@uiw/react-codemirror";
 import axios from "axios";
 import { APIResponse } from "../../types";
 import { useLocation } from "react-router-dom";
@@ -10,9 +13,9 @@ import FileName from "./fileName";
 import { languageSwitch } from "../../utils/languages";
 
 export enum EditorFont {
-  SMALL = "0.9rem",
-  MEDIUM = "1.1rem",
-  LARGE = "1.25rem",
+  SMALL = "0.9rem" as any,
+  MEDIUM = "1.1rem" as any,
+  LARGE = "1.25rem" as any,
 }
 
 function Home() {
@@ -24,6 +27,7 @@ function Home() {
   );
   const [editorLanguage, setEditorLanguage] = useState<String>("javascript");
   const location = useLocation();
+  const refs = useRef<ReactCodeMirrorRef>({});
 
   function saveData() {
     axios({
@@ -80,6 +84,14 @@ function Home() {
       setCodebox(location.state.code);
     }
   }, [location.state]);
+
+  useEffect(() => {
+    if (refs.current?.view) console.log("EditorView:", refs.current?.view);
+    if (refs.current?.state) console.log("EditorState:", refs.current?.state);
+    // if (refs.current?.editor)
+    console.log("HTMLDivElement:", refs.current?.editor);
+    // refs.current?.view?.   viewState.state.doc.text.length;
+  }, [refs.current]);
 
   return (
     <>
@@ -143,16 +155,29 @@ function Home() {
         }}
       >
         <CodeMirror
+          ref={refs}
           value={codebox}
           height="600px"
           theme="dark"
           extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {
             setCodebox(value);
+            // console.log(getStatistics(refs.current.view.).lineCount);
           }}
+          onStatistics={() => {}}
         />
       </div>
-      <div className="flex-bottom">This will be info block!</div>
+      <div className="flex-bottom">
+        <div>{editorLanguage}</div>
+        <div>
+          Font Size:{" "}
+          {Object.keys(EditorFont)[
+            Object.values(EditorFont).indexOf(
+              editorFontSize as unknown as EditorFont
+            )
+          ].toLowerCase()}
+        </div>
+      </div>
     </>
   );
 }
