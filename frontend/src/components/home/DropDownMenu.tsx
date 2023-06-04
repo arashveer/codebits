@@ -1,9 +1,7 @@
 import React from "react";
 import "../../styles/app.css";
 import { EditorFont } from "./Home";
-import { LanguageSupport } from "@codemirror/language";
-import { languageSwitch, languages } from "../../utils/languages";
-import { langs } from "@uiw/codemirror-extensions-langs";
+import { languages } from "../../utils/languages";
 
 interface Props {
   fontSize: EditorFont;

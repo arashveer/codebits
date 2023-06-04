@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.ts"
+    "devStart": "nodemon server.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "nodemon": "^2.0.22",
     "prisma": "^4.13.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }

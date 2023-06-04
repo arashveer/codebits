@@ -1,15 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import CodeMirror, {
-  ReactCodeMirrorRef,
-  getStatistics,
-} from "@uiw/react-codemirror";
+import CodeMirror, { ReactCodeMirrorRef } from "@uiw/react-codemirror";
 import axios from "axios";
 import { APIResponse } from "../../types";
 import { useLocation } from "react-router-dom";
 import DropDownMenu from "../home/DropDownMenu";
 import "../../styles/app.css";
 import "../../styles/editor.css";
-import FileName from "./fileName";
+import FileName from "./FileName";
 import { languageSwitch } from "../../utils/languages";
 
 export enum EditorFont {
@@ -62,13 +59,7 @@ function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-    })
-      .then((res) => {
-        console.log("Success!");
-      })
-      .catch((err) => {
-        console.log("Error sending data to api", err);
-      });
+    });
   }
 
   function changeFontSize(size: EditorFont) {
@@ -164,7 +155,6 @@ function Home() {
             setCodebox(value);
             // console.log(getStatistics(refs.current.view.).lineCount);
           }}
-          onStatistics={() => {}}
         />
       </div>
       <div className="flex-bottom">

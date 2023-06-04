@@ -23,13 +23,7 @@ export default function FileName(props: Props) {
       headers: {
         "Content-Type": "application/json",
       },
-    })
-      .then((res) => {
-        console.log("Success!");
-      })
-      .catch((err) => {
-        console.log("Error sending data to api", err);
-      });
+    });
   }
 
   useEffect(() => {

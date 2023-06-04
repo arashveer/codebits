@@ -1,11 +1,8 @@
-import * as React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
 import { SharedCodeViewer } from "./components/sharedcodeviewer/SharedCodeViewer";
 
-export interface IAppProps {}
-
-export default function App(props: IAppProps) {
+export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />

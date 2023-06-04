@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Code" ALTER COLUMN "language" SET DATA TYPE VARCHAR(16);

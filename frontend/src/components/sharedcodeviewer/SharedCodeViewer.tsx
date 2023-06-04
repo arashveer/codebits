@@ -6,9 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { APIResponse } from "../../types";
 import { timeSince } from "../../utils/timeSince";
 
-export interface ISharedCodeViewerProps {}
-
-export function SharedCodeViewer(props: ISharedCodeViewerProps) {
+export function SharedCodeViewer() {
   const [apiResponse, setApiResponse] = React.useState<APIResponse>();
   const { codeid } = useParams() || {};
 
