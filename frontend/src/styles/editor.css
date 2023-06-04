@@ -1,3 +1,5 @@
+@import "./app.css";
+
 .cm-editor.cm-focused {
   outline: none;
 }

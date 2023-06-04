@@ -1,0 +1,23 @@
+@import "./app.css";
+
+.ͼo .cm-gutters,
+.ͼo {
+  border-radius: 0.25rem;
+}
+
+.file-name-header {
+  font-family: var(--base-serif-font);
+  font-weight: bold;
+  font-size: 2.25rem;
+  padding: 0.5rem 0 0 0;
+}
+
+.info-container {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.35rem;
+}
+
+.last-modified {
+  color: grey;
+}
