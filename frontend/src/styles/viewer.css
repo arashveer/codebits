@@ -8,8 +8,7 @@
 .file-name-header {
   font-family: var(--base-serif-font);
   font-weight: bold;
-  font-size: 2.25rem;
-  padding: 0.5rem 0 0 0;
+  font-size: 1.75rem;
 }
 
 .info-container {
@@ -20,4 +19,5 @@
 
 .last-modified {
   color: grey;
+  display: inline;
 }
