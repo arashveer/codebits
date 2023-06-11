@@ -85,7 +85,7 @@ function Home() {
   }, [refs.current]);
 
   return (
-    <>
+    <div className="container">
       <div className="flex-container">
         <DropDownMenu
           fontSize={editorFontSize}
@@ -158,9 +158,9 @@ function Home() {
         />
       </div>
       <div className="flex-bottom">
-        <div>{editorLanguage}</div>
-        <div>
-          Font Size:{" "}
+        <div className="flex-bottom-item">{editorLanguage}</div>
+        <div className="flex-bottom-item">
+          font-size:{""}
           {Object.keys(EditorFont)[
             Object.values(EditorFont).indexOf(
               editorFontSize as unknown as EditorFont
@@ -168,7 +168,7 @@ function Home() {
           ].toLowerCase()}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

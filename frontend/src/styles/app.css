@@ -20,7 +20,7 @@
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9Ijk2cHgiIGhlaWdodD0iOTZweCI+PHBhdGggZD0iTSAyMy43NzM0MzggMTIgQyAxMi44NTU0MzcgMTIgMTIgMTIuODU0NDM3IDEyIDIzLjc3MzQzOCBMIDEyIDQwLjIyNjU2MiBDIDEyIDUxLjE0NDU2MyAxMi44NTU0MzggNTIgMjMuNzczNDM4IDUyIEwgNDAuMjI2NTYyIDUyIEMgNTEuMTQ0NTYzIDUyIDUyIDUxLjE0NDU2MyA1MiA0MC4yMjY1NjIgTCA1MiAyNC45NzA3MDMgTCA0OCAzMS4xNTIzNDQgTCA0OCA0Mi44MzIwMzEgQyA0OCA0Ny42MjUwMzEgNDcuNjI0MDMxIDQ4IDQyLjgzMjAzMSA0OCBMIDIxLjE2Nzk2OSA0OCBDIDE2LjM3NDk2OSA0OCAxNiA0Ny42MjQwMzEgMTYgNDIuODMyMDMxIEwgMTYgMjEuMTY3OTY5IEMgMTYgMTYuMzc0OTY5IDE2LjM3NDk2OSAxNiAyMS4xNjc5NjkgMTYgTCA0Mi44MzIwMzEgMTYgQyA0NC4xMDEwMzEgMTYgNDUuMDUzMzQ0IDE2LjAyODI1IDQ1Ljc3NzM0NCAxNi4xNTYyNSBMIDQ4LjA2ODM1OSAxMi42MTEzMjggQyA0Ni4zMjYzNTkgMTIuMDk2MzI4IDQzLjgyNTU2MyAxMiA0MC4yMjY1NjIgMTIgTCAyMy43NzM0MzggMTIgeiBNIDUwLjk2Mjg5MSAxNS4zMTQ0NTMgQyA1MC4zMjExMDQgMTUuMzI3MzczIDQ5LjY5NTkzNyAxNS42NDcxODggNDkuMzIwMzEyIDE2LjIyNjU2MiBMIDM0Ljc5ODgyOCAzOC42NzE4NzUgTCAyNS43NzczNDQgMjguMzM1OTM4IEMgMjUuMDUyMzQ0IDI3LjUwNDkzOCAyMy43ODkwNzggMjcuNDE1NTc4IDIyLjk1NTA3OCAyOC4xNDI1NzggQyAyMi4xMjMwNzggMjguODY4NTc4IDIyLjAzNjY3MiAzMC4xMzI4NDQgMjIuNzYzNjcyIDMwLjk2NDg0NCBMIDMzLjUyNzM0NCA0My4zMDA3ODEgQyAzMy45MDgzNDQgNDMuNzM3NzgxIDM0LjQ2MDE1NiA0My45ODYzMjggMzUuMDM1MTU2IDQzLjk4NjMyOCBDIDM1LjA4MzE1NiA0My45ODYzMjggMzUuMTI5NzM0IDQzLjk4NTQyMiAzNS4xNzc3MzQgNDMuOTgyNDIyIEMgMzUuODA0NzM0IDQzLjkzNzQyMiAzNi4zNzM4NDQgNDMuNTk5MjY2IDM2LjcxNDg0NCA0My4wNzIyNjYgTCA1Mi42Nzk2ODggMTguNDAwMzkxIEMgNTMuMjc5Njg4IDE3LjQ3MjM5MSA1My4wMTQ4OTEgMTYuMjM0NzY2IDUyLjA4Nzg5MSAxNS42MzQ3NjYgQyA1MS43Mzk4OTEgMTUuNDA5NzY2IDUxLjM0Nzk2MyAxNS4zMDY3MDEgNTAuOTYyODkxIDE1LjMxNDQ1MyB6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 1.75rem;
+  width: 1.25rem;
   height: 1.25rem;
 }
 
@@ -33,8 +33,12 @@
 }
 
 ::selection {
-  background-color: #d6d7d764;
+  background-color: var(--accent-color);
   color: #fff;
+}
+
+.accent-color {
+  color: var(--accent-color);
 }
 
 body {
@@ -44,7 +48,14 @@ body {
   color: var(--base-text-color);
   font-family: var(--base-font);
   font-size: 16px;
-  padding: 2rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 2rem;
 }
 
 .flex {
@@ -59,11 +70,22 @@ body {
 
 .flex-bottom {
   display: flex;
+  justify-content: end;
   border-top: 1px solid #454747;
   background-color: #282a2b;
   padding: 0.625rem 0.75rem;
   border-radius: 0 0 0.75rem 0.75rem;
 }
+
+.flex-bottom-item {
+  padding: 0 0.25rem 0 0.75rem;
+  font-family: var(--base-mono-font);
+  font-size: 0.85rem;
+}
+
+/* .flex-bottom-item:hover {
+  background-color: rgba(89, 89, 89, 0.5);
+} */
 
 .flex-link-share {
   display: flex;
@@ -102,6 +124,7 @@ body {
   border: none;
   cursor: pointer;
   background: none;
+  padding: 0;
 }
 
 .top-tabs {
@@ -306,4 +329,42 @@ body {
   height: 1rem;
   border: 0.3em solid var(--base-text-color);
   border-color: var(--base-text-color) transparent transparent transparent;
+}
+
+/*Header & Footer */
+
+.head {
+  height: 5rem;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 2rem;
+}
+
+.head-label {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.footer {
+  height: 6rem;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 2rem;
+}
+
+.footer a {
+  color: rgba(227, 227, 227, 0.78);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(227, 227, 227, 0.78);
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  padding-bottom: 1px;
 }

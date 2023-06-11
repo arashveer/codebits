@@ -42,6 +42,7 @@ export default function FileName(props: Props) {
         ref={inputRef}
         value={filename}
         disabled={!isEditable}
+        title={filename}
         onChange={(e) => {
           setFilename(e.target.value);
         }}

@@ -37,11 +37,12 @@ export function SharedCodeViewer() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <div className="file-name-header">{apiResponse?.title}</div>
       <div className="flex info-container">
         <div className="last-modified">
-          Created:{" "}
+          {apiResponse?.language}
+          {" | Created: "}
           {apiResponse &&
             new Date(apiResponse.createdAt.toString()).toLocaleDateString()}
           {" | Last modified: "}
