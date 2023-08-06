@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../../styles/app.css";
 import axios from "axios";
+import { BACKEND_URL } from "../../config";
 
 interface Props {
   code_id: String;
@@ -15,7 +16,7 @@ export default function FileName(props: Props) {
   function updateTitle(newTitle: string) {
     axios({
       method: "PUT",
-      url: `http://localhost:3000/api/code/${props.code_id}`,
+      url: `${BACKEND_URL}/api/code/${props.code_id}`,
       data: JSON.stringify({
         id: props.code_id,
         title: newTitle,

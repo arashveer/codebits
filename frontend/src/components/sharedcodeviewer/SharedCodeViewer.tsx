@@ -8,6 +8,7 @@ import { timeSince } from "../../utils/timeSince";
 import "../../styles/app.css";
 import "../../styles/editor.css";
 import "../../styles/viewer.css";
+import { BACKEND_URL } from "../../config";
 
 export function SharedCodeViewer() {
   const [apiResponse, setApiResponse] = React.useState<APIResponse>();
@@ -16,7 +17,7 @@ export function SharedCodeViewer() {
   function retrieveData(data_id: string) {
     axios({
       method: "GET",
-      url: `http://localhost:3000/api/share_id/${data_id}`,
+      url: `${BACKEND_URL}/api/share_id/${data_id}`,
       headers: {
         "Content-Type": "application/json",
       },

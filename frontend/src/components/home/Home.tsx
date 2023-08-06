@@ -8,6 +8,7 @@ import "../../styles/app.css";
 import "../../styles/editor.css";
 import FileName from "./FileName";
 import { languageSwitch } from "../../utils/languages";
+import { BACKEND_URL, FRONTEND_URL } from "../../config";
 
 export enum EditorFont {
   SMALL = "0.9rem" as any,
@@ -29,7 +30,7 @@ function Home() {
   function saveData() {
     axios({
       method: "POST",
-      url: "http://localhost:3000/api/code/create",
+      url: `${BACKEND_URL}/api/code/create`,
       data: JSON.stringify({
         code: codebox,
         language: editorLanguage,
@@ -50,7 +51,7 @@ function Home() {
   function updateData() {
     axios({
       method: "PUT",
-      url: `http://localhost:3000/api/code/${apiResponse?.id}`,
+      url: `${BACKEND_URL}/api/code/${apiResponse?.id}`,
       data: JSON.stringify({
         code: codebox,
         language: editorLanguage,
@@ -111,9 +112,7 @@ function Home() {
                     className="copy-button"
                     onClick={(self) => {
                       navigator.clipboard.writeText(
-                        "http://localhost:5173/snippet/" +
-                          apiResponse?.share +
-                          "/"
+                        FRONTEND_URL + "/snippet/" + apiResponse?.share + "/"
                       );
                       self.currentTarget.innerHTML = "COPIED!";
                       self.currentTarget.classList.add("active-copied-accent");
