@@ -102,7 +102,7 @@ function Home() {
               {apiResponse ? (
                 <div className="flex-link-share">
                   <input
-                    value={`http://localhost:5173/snippet/${apiResponse?.share}`}
+                    value={`${FRONTEND_URL}/snippet/${apiResponse?.share}`}
                     className="flex-link"
                     id="copy-link"
                     disabled
