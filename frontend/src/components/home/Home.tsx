@@ -77,13 +77,13 @@ function Home() {
     }
   }, [location.state]);
 
-  useEffect(() => {
-    if (refs.current?.view) console.log("EditorView:", refs.current?.view);
-    if (refs.current?.state) console.log("EditorState:", refs.current?.state);
-    // if (refs.current?.editor)
-    console.log("HTMLDivElement:", refs.current?.editor);
-    // refs.current?.view?.   viewState.state.doc.text.length;
-  }, [refs.current]);
+  // useEffect(() => {
+  //   if (refs.current?.view) console.log("EditorView:", refs.current?.view);
+  //   if (refs.current?.state) console.log("EditorState:", refs.current?.state);
+  //   // if (refs.current?.editor)
+  //   console.log("HTMLDivElement:", refs.current?.editor);
+  //   // refs.current?.view?.   viewState.state.doc.text.length;
+  // }, [refs.current]);
 
   return (
     <div className="container">
@@ -147,7 +147,7 @@ function Home() {
         <CodeMirror
           ref={refs}
           value={codebox}
-          height="600px"
+          height="650px"
           theme="dark"
           extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {

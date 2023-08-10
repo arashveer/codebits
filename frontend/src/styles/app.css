@@ -17,15 +17,24 @@
 }
 
 .tick-icon {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9Ijk2cHgiIGhlaWdodD0iOTZweCI+PHBhdGggZD0iTSAyMy43NzM0MzggMTIgQyAxMi44NTU0MzcgMTIgMTIgMTIuODU0NDM3IDEyIDIzLjc3MzQzOCBMIDEyIDQwLjIyNjU2MiBDIDEyIDUxLjE0NDU2MyAxMi44NTU0MzggNTIgMjMuNzczNDM4IDUyIEwgNDAuMjI2NTYyIDUyIEMgNTEuMTQ0NTYzIDUyIDUyIDUxLjE0NDU2MyA1MiA0MC4yMjY1NjIgTCA1MiAyNC45NzA3MDMgTCA0OCAzMS4xNTIzNDQgTCA0OCA0Mi44MzIwMzEgQyA0OCA0Ny42MjUwMzEgNDcuNjI0MDMxIDQ4IDQyLjgzMjAzMSA0OCBMIDIxLjE2Nzk2OSA0OCBDIDE2LjM3NDk2OSA0OCAxNiA0Ny42MjQwMzEgMTYgNDIuODMyMDMxIEwgMTYgMjEuMTY3OTY5IEMgMTYgMTYuMzc0OTY5IDE2LjM3NDk2OSAxNiAyMS4xNjc5NjkgMTYgTCA0Mi44MzIwMzEgMTYgQyA0NC4xMDEwMzEgMTYgNDUuMDUzMzQ0IDE2LjAyODI1IDQ1Ljc3NzM0NCAxNi4xNTYyNSBMIDQ4LjA2ODM1OSAxMi42MTEzMjggQyA0Ni4zMjYzNTkgMTIuMDk2MzI4IDQzLjgyNTU2MyAxMiA0MC4yMjY1NjIgMTIgTCAyMy43NzM0MzggMTIgeiBNIDUwLjk2Mjg5MSAxNS4zMTQ0NTMgQyA1MC4zMjExMDQgMTUuMzI3MzczIDQ5LjY5NTkzNyAxNS42NDcxODggNDkuMzIwMzEyIDE2LjIyNjU2MiBMIDM0Ljc5ODgyOCAzOC42NzE4NzUgTCAyNS43NzczNDQgMjguMzM1OTM4IEMgMjUuMDUyMzQ0IDI3LjUwNDkzOCAyMy43ODkwNzggMjcuNDE1NTc4IDIyLjk1NTA3OCAyOC4xNDI1NzggQyAyMi4xMjMwNzggMjguODY4NTc4IDIyLjAzNjY3MiAzMC4xMzI4NDQgMjIuNzYzNjcyIDMwLjk2NDg0NCBMIDMzLjUyNzM0NCA0My4zMDA3ODEgQyAzMy45MDgzNDQgNDMuNzM3NzgxIDM0LjQ2MDE1NiA0My45ODYzMjggMzUuMDM1MTU2IDQzLjk4NjMyOCBDIDM1LjA4MzE1NiA0My45ODYzMjggMzUuMTI5NzM0IDQzLjk4NTQyMiAzNS4xNzc3MzQgNDMuOTgyNDIyIEMgMzUuODA0NzM0IDQzLjkzNzQyMiAzNi4zNzM4NDQgNDMuNTk5MjY2IDM2LjcxNDg0NCA0My4wNzIyNjYgTCA1Mi42Nzk2ODggMTguNDAwMzkxIEMgNTMuMjc5Njg4IDE3LjQ3MjM5MSA1My4wMTQ4OTEgMTYuMjM0NzY2IDUyLjA4Nzg5MSAxNS42MzQ3NjYgQyA1MS43Mzk4OTEgMTUuNDA5NzY2IDUxLjM0Nzk2MyAxNS4zMDY3MDEgNTAuOTYyODkxIDE1LjMxNDQ1MyB6IiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPjxwYXRoIGQ9Ik0gMjAuMjkyOTY5IDUuMjkyOTY4OCBMIDkgMTYuNTg1OTM4IEwgNC43MDcwMzEyIDEyLjI5Mjk2OSBMIDMuMjkyOTY4OCAxMy43MDcwMzEgTCA5IDE5LjQxNDA2MiBMIDIxLjcwNzAzMSA2LjcwNzAzMTIgTCAyMC4yOTI5NjkgNS4yOTI5Njg4IHoiLz48L3N2Zz4=);
   background-size: contain;
   background-repeat: no-repeat;
   width: 1.25rem;
   height: 1.25rem;
 }
 
+.github-icon {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjEwMjQiCiAgIGhlaWdodD0iMTAyNCIKICAgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIKICAgZmlsbD0ibm9uZSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnODM1IgogICBzb2RpcG9kaTpkb2NuYW1lPSJPY3RpY29ucy1tYXJrLWdpdGh1Yi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMC4yIChlODZjODcwOCwgMjAyMS0wMS0xNSkiPgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTg0MSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGRlZnMKICAgICBpZD0iZGVmczgzOSIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIKICAgICBncmlkdG9sZXJhbmNlPSIxMCIKICAgICBndWlkZXRvbGVyYW5jZT0iMTAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjE0NDAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzk4IgogICAgIGlkPSJuYW1lZHZpZXc4MzciCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjAuNjA0NDkyMTkiCiAgICAgaW5rc2NhcGU6Y3g9IjUxMiIKICAgICBpbmtzY2FwZTpjeT0iNTEyIgogICAgIGlua3NjYXBlOndpbmRvdy14PSIwIgogICAgIGlua3NjYXBlOndpbmRvdy15PSIyNSIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzgzNSIgLz4KICA8cGF0aAogICAgIGZpbGwtcnVsZT0iZXZlbm9kZCIKICAgICBjbGlwLXJ1bGU9ImV2ZW5vZGQiCiAgICAgZD0iTTggMEMzLjU4IDAgMCAzLjU4IDAgOEMwIDExLjU0IDIuMjkgMTQuNTMgNS40NyAxNS41OUM1Ljg3IDE1LjY2IDYuMDIgMTUuNDIgNi4wMiAxNS4yMUM2LjAyIDE1LjAyIDYuMDEgMTQuMzkgNi4wMSAxMy43MkM0IDE0LjA5IDMuNDggMTMuMjMgMy4zMiAxMi43OEMzLjIzIDEyLjU1IDIuODQgMTEuODQgMi41IDExLjY1QzIuMjIgMTEuNSAxLjgyIDExLjEzIDIuNDkgMTEuMTJDMy4xMiAxMS4xMSAzLjU3IDExLjcgMy43MiAxMS45NEM0LjQ0IDEzLjE1IDUuNTkgMTIuODEgNi4wNSAxMi42QzYuMTIgMTIuMDggNi4zMyAxMS43MyA2LjU2IDExLjUzQzQuNzggMTEuMzMgMi45MiAxMC42NCAyLjkyIDcuNThDMi45MiA2LjcxIDMuMjMgNS45OSAzLjc0IDUuNDNDMy42NiA1LjIzIDMuMzggNC40MSAzLjgyIDMuMzFDMy44MiAzLjMxIDQuNDkgMy4xIDYuMDIgNC4xM0M2LjY2IDMuOTUgNy4zNCAzLjg2IDguMDIgMy44NkM4LjcgMy44NiA5LjM4IDMuOTUgMTAuMDIgNC4xM0MxMS41NSAzLjA5IDEyLjIyIDMuMzEgMTIuMjIgMy4zMUMxMi42NiA0LjQxIDEyLjM4IDUuMjMgMTIuMyA1LjQzQzEyLjgxIDUuOTkgMTMuMTIgNi43IDEzLjEyIDcuNThDMTMuMTIgMTAuNjUgMTEuMjUgMTEuMzMgOS40NyAxMS41M0M5Ljc2IDExLjc4IDEwLjAxIDEyLjI2IDEwLjAxIDEzLjAxQzEwLjAxIDE0LjA4IDEwIDE0Ljk0IDEwIDE1LjIxQzEwIDE1LjQyIDEwLjE1IDE1LjY3IDEwLjU1IDE1LjU5QzEzLjcxIDE0LjUzIDE2IDExLjUzIDE2IDhDMTYgMy41OCAxMi40MiAwIDggMFoiCiAgICAgdHJhbnNmb3JtPSJzY2FsZSg2NCkiCiAgICAgZmlsbD0iIzFCMUYyMyIKICAgICBpZD0icGF0aDgzMyIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxIiAvPgo8L3N2Zz4K);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 :root {
   --base-text-color: #d6d7d7;
+  --base-text-hover-color: #ffffff;
   --accent-color: #ee614c;
   --base-font: "Rubik", sans-serif;
   --base-mono-font: "JetBrains Mono", monospace;
@@ -55,7 +64,7 @@ a {
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0 0rem;
 }
 
 .flex {
@@ -118,6 +127,8 @@ a {
 
 #file-name:focus-visible {
   outline: none;
+  border-bottom: 1px rgba(227, 227, 227, 0.4) solid;
+  margin-bottom: -1px;
 }
 
 .rename-button {
@@ -125,6 +136,10 @@ a {
   cursor: pointer;
   background: none;
   padding: 0;
+}
+
+.rename-button:active {
+  transform: scale(1.15);
 }
 
 .top-tabs {
@@ -183,6 +198,10 @@ a {
   background-color: #d9503b;
 }
 
+.save-button:active {
+  transform: translateY(2px);
+}
+
 /* DROP DOWN */
 .menu-container {
   position: relative;
@@ -197,6 +216,7 @@ a {
   position: absolute;
   width: 15rem;
   padding: 1rem 0 0 0;
+  transition: all 500ms ease-in-out 0s;
 }
 
 .menu[aria-hidden="true"] {
@@ -219,10 +239,11 @@ a {
   border: none;
   cursor: pointer;
   height: 100%;
+  transition: all 500ms ease-in-out 0s;
 }
 
 .settings-button > div.settings-icon {
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in-out;
 }
 
 .settings-button[aria-expanded="true"] {
@@ -334,17 +355,37 @@ a {
 /*Header & Footer */
 
 .head {
-  height: 5rem;
+  height: 6rem;
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
-  left: 2rem;
+  /* left: 2rem; */
+  justify-content: space-between;
 }
 
 .head-label {
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
+}
+
+.head-label a {
+  text-decoration: none;
+  color: var(--base-text-color);
+  user-select: none;
+  font-weight: 500;
+}
+
+.github-link {
+  gap: 0.45rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--base-text-color);
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: var(--base-text-hover-color);
 }
 
 .footer {
@@ -366,5 +407,6 @@ a {
 .footer a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  padding-bottom: 1px;
+  padding-bottom: 0.2rem;
+  transition: all 250ms ease 0ms;
 }

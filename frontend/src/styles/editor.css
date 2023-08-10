@@ -11,6 +11,13 @@
 .ͼo .cm-gutters,
 .ͼo {
   background-color: rgba(43, 45, 46, 255);
+  border-radius: 0rem !important;
+}
+
+.ͼ1n {
+  height: 600px !important;
+  min-height: 600px;
+  max-height: 800px;
 }
 
 .ͼo .cm-activeLine,
