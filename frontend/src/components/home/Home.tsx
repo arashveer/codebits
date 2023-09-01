@@ -9,7 +9,6 @@ import "../../styles/editor.css";
 import FileName from "./FileName";
 import { languageSwitch } from "../../utils/languages";
 import { BACKEND_URL, FRONTEND_URL } from "../../config";
-import { language } from "@codemirror/language";
 
 export enum EditorFont {
   SMALL = "0.9rem" as any,
@@ -149,7 +148,8 @@ function Home() {
         <CodeMirror
           ref={refs}
           value={codebox}
-          height={document.body.clientHeight - 100 + "px"}
+          // height={document.body.scrollHeight + "px"}
+          height="800px"
           theme="dark"
           extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {
