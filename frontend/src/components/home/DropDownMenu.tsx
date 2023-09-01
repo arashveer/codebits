@@ -2,10 +2,12 @@ import React from "react";
 import "../../styles/app.css";
 import { EditorFont } from "./Home";
 import { languages } from "../../utils/languages";
+import { DropDown } from "../utils/DropDown";
 
 interface Props {
   fontSize: EditorFont;
   setFontSize: (size: EditorFont) => void;
+  editorLanguage: String;
   setEditorLanguage: (lang: String) => void;
 }
 
@@ -62,20 +64,14 @@ export default function DropDownMenu(props: Props) {
           <div className="settings-icon" />
         </button>
         <div ref={dropDownRef} aria-hidden="true" className="menu">
-          <div className="lang-flexbox">
+          <div className="language-nav">
             <div>Language</div>
-            <div className="flex select-dropdown">
-              <select
-                onChange={(val) => {
-                  props.setEditorLanguage(val.target.value);
-                }}
-                className="lang-dropdown"
-              >
-                {languages.map((item) => (
-                  <option>{item}</option>
-                ))}
-              </select>
-            </div>
+            {/* drop down for languages */}
+            <DropDown
+              activeItem={props.editorLanguage}
+              items={languages}
+              setActiveItem={props.setEditorLanguage}
+            />
           </div>
           <div className="font-flexbox">
             <div>Font Size</div>

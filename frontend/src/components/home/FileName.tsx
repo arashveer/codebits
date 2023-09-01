@@ -36,7 +36,12 @@ export default function FileName(props: Props) {
   }, [isEditable]);
 
   return (
-    <div className="top-tabs flex font-mono">
+    <div
+      className={
+        "top-tabs flex font-mono " +
+        (isEditable ? "expand-tab" : "contract-tab")
+      }
+    >
       <input
         id="file-name"
         type="text"
@@ -53,6 +58,7 @@ export default function FileName(props: Props) {
           className="rename-button"
           onClick={() => {
             updateTitle(filename);
+            setIsEditable(false);
           }}
         >
           <div className="tick-icon" />

@@ -9,6 +9,7 @@ import "../../styles/editor.css";
 import FileName from "./FileName";
 import { languageSwitch } from "../../utils/languages";
 import { BACKEND_URL, FRONTEND_URL } from "../../config";
+import { language } from "@codemirror/language";
 
 export enum EditorFont {
   SMALL = "0.9rem" as any,
@@ -91,6 +92,7 @@ function Home() {
         <DropDownMenu
           fontSize={editorFontSize}
           setFontSize={changeFontSize}
+          editorLanguage={editorLanguage}
           setEditorLanguage={changeLanguage}
         />
         <div className="file-tab">
@@ -122,7 +124,7 @@ function Home() {
                   </button>
                 </div>
               ) : (
-                "Click save to generate a link!"
+                "Click share to generate a link!"
               )}
             </div>
           </div>
@@ -134,7 +136,7 @@ function Home() {
             </button>
           ) : (
             <button className="save-button" onClick={saveData}>
-              Save
+              Share
             </button>
           )}
         </div>
@@ -147,7 +149,7 @@ function Home() {
         <CodeMirror
           ref={refs}
           value={codebox}
-          height="650px"
+          height={document.body.clientHeight - 100 + "px"}
           theme="dark"
           extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {

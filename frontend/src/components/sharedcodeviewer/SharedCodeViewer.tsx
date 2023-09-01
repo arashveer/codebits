@@ -38,7 +38,7 @@ export function SharedCodeViewer() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container shared-code-info">
       <div className="file-name-header">{apiResponse?.title}</div>
       <div className="flex info-container">
         <div className="last-modified">

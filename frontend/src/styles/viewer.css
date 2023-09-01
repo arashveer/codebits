@@ -1,14 +1,15 @@
 @import "./app.css";
 
-.ͼo .cm-gutters,
-.ͼo {
-  border-radius: 0.25rem;
+.shared-code-info .ͼo .cm-gutters,
+.shared-code-info .ͼo {
+  border-radius: 0.5rem !important;
 }
 
 .file-name-header {
   font-family: var(--base-serif-font);
   font-weight: bold;
   font-size: 1.75rem;
+  letter-spacing: -0.025rem;
 }
 
 .info-container {
@@ -20,4 +21,11 @@
 .last-modified {
   color: grey;
   display: inline;
+}
+
+.shared-code-info {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-block: 1rem;
 }
