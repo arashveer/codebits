@@ -13,12 +13,14 @@
 }
 
 .info-container {
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 1rem;
   align-items: center;
   padding-bottom: 0.35rem;
 }
 
 .last-modified {
+  flex-grow: 1;
   color: grey;
   display: inline;
 }
@@ -28,4 +30,16 @@
   padding: 1rem;
   border-radius: 12px;
   margin-block: 1rem;
+}
+
+.copy-link {
+  color: var(--base-text-color);
+  cursor: pointer;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.copy-link:hover {
+  color: var(--base-text-hover-color);
 }

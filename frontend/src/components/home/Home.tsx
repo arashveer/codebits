@@ -149,7 +149,7 @@ function Home() {
           ref={refs}
           value={codebox}
           // height={document.body.scrollHeight + "px"}
-          height="800px"
+          height="70vh"
           theme="dark"
           extensions={[languageSwitch(editorLanguage)()]}
           onChange={(value) => {

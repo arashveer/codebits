@@ -50,15 +50,25 @@ export function SharedCodeViewer() {
           {apiResponse &&
             timeSince(Date.parse(apiResponse.updatedAt.toString()).toString())}
         </div>
+        <a
+          className="flex copy-link"
+          onClick={(self) => {
+            if (apiResponse?.code)
+              navigator.clipboard.writeText(apiResponse?.code);
+          }}
+        >
+          <div className="copy-icon" />
+          Copy text
+        </a>
         <div>
           <Link to={"/"} state={apiResponse}>
-            <button className="save-button">Make a copy</button>
+            <button className="save-button">Make copy</button>
           </Link>
         </div>
       </div>
       <CodeMirror
         value={apiResponse?.code}
-        height="600px"
+        height="70vh"
         theme="dark"
         extensions={[javascript({ jsx: true })]}
         editable={false}
