@@ -52,7 +52,7 @@ export function SharedCodeViewer() {
         </div>
         <a
           className="flex copy-link"
-          onClick={(self) => {
+          onClick={() => {
             if (apiResponse?.code)
               navigator.clipboard.writeText(apiResponse?.code);
           }}
